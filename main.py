@@ -32,6 +32,17 @@ class CountryStatistics:
 
 
 
+    def Top3Countries2002StaticTotal(self):
+        self.filter0=self.whatIwant["Japan"].sum()
+        self.filter01 = self.whatIwant["Indonesia"].sum()
+        self.filter02 = self.whatIwant["China"].sum()
+        print(f'The total number of visitors in Japan from 1998 to 2007 is {self.filter0}.')
+        print(f'The total number of visitors in Indonesia from 1998 to 2007 is {self.filter01}.')
+        print(f'The total number of visitors in China from 1998 to 2007 is {self.filter02}.')
+
+
+
+
     def Top3Countries2002StaticMean(self):
          self.filter=self.df[290: 301]["Japan"].mean()
          self.filter1=self.df[290: 301]["Indonesia"].mean()
@@ -151,7 +162,7 @@ class CountryStatistics:
 
 
 
-
+#hello
 
     def Chart2(self):
         self.ax = self.whatIneed['China'].plot(kind='bar', title="Visitors", figsize=(10,10), legend=True, fontsize=12)
@@ -172,7 +183,7 @@ class CountryStatistics:
 
 
 asia = CountryStatistics()
-asia.Top3CountrieswiththemostVisitors()
+asia.Top3Countries2002StaticTotal()
 asia.Top3Countries2002StaticMean()
 asia.Top3Countries2002StaticMedian()
 asia.Top3Countries2002StaticSum()
